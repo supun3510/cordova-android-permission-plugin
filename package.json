@@ -1,0 +1,19 @@
+{
+  "name": "androidpermissions",
+  "version": "1.0.0",
+  "description": "Android Permissions",
+   "cordova": {
+    "id": "cordova-android-permissions-plugin",
+    "platforms": [
+      "android" 
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Permissions"
+  ],
+  "author": "Udara Kasun",
+  "license": "ISC"
+}

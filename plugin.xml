@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-android-permissions-plugin"
+        version="1.0.0">
+
+  <name>Permissions</name>
+
+  <description>Android permissions support library.</description>
+
+  <author>Udara Kasun</author>
+
+  <engines>
+    <engine name="cordova" version=">=5.0.0"/>
+  </engines>
+   
+  <!-- android -->
+  <platform name="android">
+    <js-module src="www/permissions.js" name="Permissions">
+      <clobbers target="cordova.plugins.permissions" />
+    </js-module>
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/com/android/plugins/Permissions.java" target-dir="src/com/android/plugins"/>
+    
+  </platform>
+  
+  <config-file target="AndroidManifest.xml" parent="/manifest">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" /> 
+  </config-file>
+ 
+</plugin>
